@@ -2,7 +2,7 @@
 
 (function($) {
   $.fn.highchartTable = function() {
-    
+    var headSelector = "th";
     var allowedGraphTypes = ['column', 'line', 'area', 'spline', 'pie'];
 
     var getCallable = function (table, attribute) {
@@ -76,7 +76,7 @@
       var isGraphInverted   = $table.data('graph-inverted') == 1;
 
       // Retrieve series titles
-      var ths            = $('thead th', table);
+      var ths            = $(headSelector, table);
       var columns        = [];
       var vlines         = [];
       var skippedColumns = 0;
