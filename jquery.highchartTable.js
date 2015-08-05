@@ -223,7 +223,7 @@
                                 serie.data.push(null);
                             }
                         } else {
-                            var cleanedCellValue = rawCellValue.replace(/\s/g, '').replace(/,/, '.');
+                            var cleanedCellValue = rawCellValue.replace(/\s/g, '').replace(/,/g, '');
                             cellValue = Math.round(parseFloat(cleanedCellValue) * column.scale * 100) / 100;
 
                             var dataGraphX = $td.data('graph-x');
